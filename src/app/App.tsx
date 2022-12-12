@@ -1,5 +1,15 @@
+import { DefaultLayout } from '../layouts/DefaultLayout'
+import { GlobalStyles } from '../styles/global'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from '../styles/themes/default'
+
 export const App = () => {
   return (
-    <>Hello world</>
+  	<>
+  		<ThemeProvider theme={defaultTheme}>
+  			<GlobalStyles />
+   		<DefaultLayout />
+   	</ThemeProvider>
+    </>
   )
 }
