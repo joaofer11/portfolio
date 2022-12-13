@@ -26,6 +26,14 @@ export const Home = () => {
 						escrevendo código limpo e eficiente.
 					</S.Content>
 				</article>
+				
+				<article>
+					<S.TitleWrapper>
+						<h1>Skills</h1>
+					</S.TitleWrapper>
+					
+					<Techs />
+				</article>
 			</S.BioSection>
 		</S.Home>
 	)
