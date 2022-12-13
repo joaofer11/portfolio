@@ -1,4 +1,5 @@
-import separatorSvg from '../../../../styles/svgs/separator.svg'
+import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
+import { Techs } from './components/Techs'
 import * as S from './styles'
 
 export const Home = () => {
@@ -9,13 +10,14 @@ export const Home = () => {
 				<p>Me Chamo João Fernandes, e sou um desenvolvedor Front-End</p>
 			</S.IntroSection>
 			
-			<img src={separatorSvg} />
+			<SeparatorSvg />
 			
 			<S.BioSection>
 				<article>
 					<S.TitleWrapper>
 						<h1>Sobre</h1>
 					</S.TitleWrapper>
+					
 					<S.Content>
 						Estudante de desenvolvimento web. Atualmente, cem por cento 
 						imerso na stack Front-End, com foco em desenvolver aplicações 

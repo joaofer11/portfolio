@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Home = styled.main`
-	> img {
-		width: 100%;
+	> svg {
 		margin-bottom: 0.714rem;
 	}
 `
@@ -40,6 +39,10 @@ export const IntroSection = styled.section`
 `
 
 export const BioSection = styled.section`
+	display: flex;
+	flex-direction: column;
+	gap: 1.785rem;
+	
 	padding: 0 1.428rem;
 	
 	> article {

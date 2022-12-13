@@ -1,11 +1,11 @@
-import personalBrand from '../../../../styles/svgs/personal-brand.svg'
+import { PersonalBrandSvg } from '../../../../styles/svg-components/PersonalBrandSvg'
 import { Nav } from '../Nav'
 import * as S from './styles'
 
 export const Header = () => {
 	return (
 		<S.Header>
-			<img src={personalBrand} />
+			<PersonalBrandSvg />
 			<Nav />
 		</S.Header>
 	)

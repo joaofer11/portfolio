@@ -8,7 +8,7 @@ export const Header = styled.header`
 	
 	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
 	
-	> img {
+	> svg {
 		width: 3.214rem;
 	}
 `
