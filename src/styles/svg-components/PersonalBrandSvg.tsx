@@ -5,19 +5,19 @@ export const PersonalBrandSvg = () => (
 	<path d="M46.781 17.472L31.613 23.264L31.293 19.264L42.365 15.424L33.277 11.232L35.293 7.712L47.645 13.728L46.781 17.472Z" fill="url(#paint2_linear_145_2)"/>
 	<defs>
 	<linearGradient id="paint0_linear_145_2" x1="23.8225" y1="0" x2="23.8225" y2="30.976" gradientUnits="userSpaceOnUse">
-	<stop stop-color="#2241DF"/>
-	<stop offset="1" stop-color="#0B0E49"/>
-	<stop offset="1" stop-color="#0B0E49"/>
+	<stop stopColor="#2241DF"/>
+	<stop offset="1" stopColor="#0B0E49"/>
+	<stop offset="1" stopColor="#0B0E49"/>
 	</linearGradient>
 	<linearGradient id="paint1_linear_145_2" x1="23.8225" y1="0" x2="23.8225" y2="30.976" gradientUnits="userSpaceOnUse">
-	<stop stop-color="#2241DF"/>
-	<stop offset="1" stop-color="#0B0E49"/>
-	<stop offset="1" stop-color="#0B0E49"/>
+	<stop stopColor="#2241DF"/>
+	<stop offset="1" stopColor="#0B0E49"/>
+	<stop offset="1" stopColor="#0B0E49"/>
 	</linearGradient>
 	<linearGradient id="paint2_linear_145_2" x1="23.8225" y1="0" x2="23.8225" y2="30.976" gradientUnits="userSpaceOnUse">
-	<stop stop-color="#2241DF"/>
-	<stop offset="1" stop-color="#0B0E49"/>
-	<stop offset="1" stop-color="#0B0E49"/>
+	<stop stopColor="#2241DF"/>
+	<stop offset="1" stopColor="#0B0E49"/>
+	<stop offset="1" stopColor="#0B0E49"/>
 	</linearGradient>
 	</defs>
 	</svg>
