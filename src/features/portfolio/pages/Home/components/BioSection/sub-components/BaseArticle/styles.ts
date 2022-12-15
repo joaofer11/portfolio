@@ -1,21 +1,9 @@
 import styled from 'styled-components'
 
-export const Home = styled.main`
-	> svg {
-		margin-bottom: 0.714rem;
-	}
-`
-export const BioSection = styled.section`
+export const BaseArticle = styled.article`
 	display: flex;
 	flex-direction: column;
-	gap: 1.785rem;
-	padding: 0 1.428rem;
-	
-	> article {
-		display: flex;
-		flex-direction: column;
-		gap: 0.714rem;
-	}
+	gap: 0.714rem;
 `
 
 export const TitleWrapper = styled.div`
@@ -44,12 +32,4 @@ export const TitleWrapper = styled.div`
 		text-transform: uppercase;
 		color: ${({ theme }) => theme['gray-blue-100']};
 	}
-`
-
-export const Content = styled.p`
-	font-size: 1rem;
-	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
-	line-height: 1.5;
-	color: ${({ theme }) => theme['gray-blue-550']};
 `

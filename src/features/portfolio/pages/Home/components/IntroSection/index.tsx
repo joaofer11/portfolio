@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react'
+import * as S from './styles'
 
-export const Intro = () => {
+export const IntroSection = () => {
 	const canRunEffectRef = useRef(true)
 	const [text2, setText] = useState('')
 	const text = 'Me Chamo João Fernandes, e sou um desenvolvedor Front-End'
-	console.log([...text].reduce((acc, _, index) => index + 8, 0))
 	
 	useEffect(() => {
 		if (canRunEffectRef.current) {
@@ -19,9 +19,9 @@ export const Intro = () => {
 	}, [])
 	
 	return (
-		<>
+		<S.IntroSection>
 			<span> Hello world...</span>
 			<p>{text2}</p>
-		</>
+		</S.IntroSection>
 	)
 }

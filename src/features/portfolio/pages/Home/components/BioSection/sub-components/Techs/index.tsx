@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { LOGOS_SVGS } from './data'
-import { animateByFrame } from '../../../../../../common/utils/animate-by-frame'
+import { animateByFrame } from '../../../../../../../../common/utils/animate-by-frame'
 import * as S from './styles'
 
 export const Techs = () => {
