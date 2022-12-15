@@ -1,13 +1,13 @@
 import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
 import { Techs } from './components/Techs'
+import { Intro } from './components/Intro'
 import * as S from './styles'
 
 export const Home = () => {
 	return (
 		<S.Home>
 			<S.IntroSection>
-				<span>👋 Hello world...</span>
-				<p>Me Chamo João Fernandes, e sou um desenvolvedor Front-End</p>
+				<Intro />
 			</S.IntroSection>
 			
 			<SeparatorSvg />
