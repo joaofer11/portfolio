@@ -1,123 +1,64 @@
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 import { LOGOS_SVGS } from './data'
+import { animateByFrame } from '../../../../../../common/utils/animate-by-frame'
 import * as S from './styles'
 
 export const Techs = () => {
-	const [coordinates, setCoordinates] = useState({ x: 0, y: 0 })
 	const elementsRef = useRef([])
 	
-	/*const handleMouseMove = (e) => {
-		const pointerPosX = e.clientX
-		const pointerPosY = e.clientY
-		const target = e.currentTarget
-		const { x: distFromLeft, y: distFromTop } = target.getBoundingClientRect()
-		
-		const pointerXOffsetOnElement = pointerPosX - distFromLeft
-		const pointerYOffsetOnElement = pointerPosY - distFromTop
-	}*/
+	const getElRect = (el) => el.getBoundingClientRect()
 	
-	const handleMouseMove2 = (e) => {
-		const pointerPosX = e.clientX
-		const pointerPosY = e.clientY
+	const moveRadialGradientAtCss = (pointerPos) => (els) => {
+		const logoWrapperPos = getElRect(els.logoWrapper)
+		const logoPos = getElRect(els.logo)
 		
+		els.logoWrapper
+			.style
+			.setProperty('--pointerXOffset', `${pointerPos.x - logoWrapperPos.x}px`)
 		
-		elementsRef.current.forEach(el => {
-			const { x, y } = el.getBoundingClientRect()
-			const pointerXOffset = pointerPosX - x
-			const pointerYOffset = pointerPosY - y
-			
-			el.style.setProperty('--pointerXOffset', pointerXOffset + 'px')
-			el.style.setProperty('--pointerYOffset', pointerYOffset + 'px')
-		})
+		els.logoWrapper
+			.style
+			.setProperty('--pointerYOffset', `${pointerPos.y - logoWrapperPos.y}px`)
+		
+		els.logo
+			.style
+			.setProperty('--pointerXOffset', `${pointerPos.x - logoPos.x}px`)
+		els.logo
+			.style
+			.setProperty('--pointerYOffset', `${pointerPos.y - logoPos.y}px`)
 	}
+	
+	const decreaseOpacity = els => progressPercent =>
+		els.logoWrapper.style.setProperty('--opacity', 1 - progressPercent)
+	
+	const increaseOpacity = els => progressPercent =>
+		els.logoWrapper.style.setProperty('--opacity', progressPercent)
+	
+	const handleMouseLeave = () => elementsRef.current.forEach(els => {
+		animateByFrame(decreaseOpacity(els), 500)
+	})
+	
+	const handleMouseMove = (e) => {
+		const { clientX: x, clientY: y } = e
+		elementsRef.current.forEach(moveRadialGradientAtCss({ x, y }))
+	}
+	
+	const handleMouseEnter = () => elementsRef.current.forEach(els => {
+		animateByFrame(increaseOpacity(els), 500)
+	})
+	
+	const setRefOfElements = (name, index) => el => {
+		elementsRef.current[index] = { ...elementsRef.current[index], [name]: el }
+	}
+	
 	const renderedLogosSvgs = Object.keys(LOGOS_SVGS).map((logoName, index) => (
 		<S.LogoSvgWrapper
-			ref={el => elementsRef.current[index] = el}
-		>
-			<div className="customBorder"></div>
-			<i className={LOGOS_SVGS[logoName]}></i>
-		</S.LogoSvgWrapper>
-	))
-	
-	
-	
-	
-	
-	const handleMouseMove3 = (e) => {
-		const pointerPosX = e.clientX
-		const pointerPosY = e.clientY
-		
-		elementsRef.current.forEach(els => {
-			const { 
-				x: logoWrapperX, 
-				y: logoWrapperY
-			} = els.logoWrapper.getBoundingClientRect()
-			
-			const { 
-				x: logoX, 
-				y: logoY
-			} = els.logo.getBoundingClientRect()
-			
-			els.logoWrapper.style.setProperty('--pointerXOffset', `${pointerPosX - logoWrapperX}px`)
-			els.logoWrapper.style.setProperty('--pointerYOffset', `${pointerPosY - logoWrapperY}px`)
-			
-			els.logo.style.setProperty('--pointerXOffset', pointerPosX - logoX + 'px')
-			els.logo.style.setProperty('--pointerYOffset', pointerPosY - logoY + 'px')
-		})
-	}
-	
-	const changeOpacity = (logo) => {
-		let duration = 500
-		let startTimestamp = null
-		
-		const loopFn = (timestamp) => {
-			if (!startTimestamp) startTimestamp = timestamp
-			const msPassed = timestamp - startTimestamp
-			const progress = msPassed / duration
-			logo.style.setProperty('--opacity', progress)
-			
-			if (progress < 1) requestAnimationFrame(loopFn)
-		}
-		
-		requestAnimationFrame(loopFn)
-	}
-	
-	const resetOpacity = (logo) => {
-		let duration = 500
-		let startTimestamp = null
-		
-		const loopFn = (timestamp) => {
-			if (!startTimestamp) startTimestamp = timestamp
-			const msPassed = timestamp - startTimestamp
-			const progress = 1 - (msPassed) / duration
-			console.log(progress)
-			logo.style.setProperty('--opacity', progress)
-			
-			if (progress > 0) requestAnimationFrame(loopFn)
-		}
-		
-		requestAnimationFrame(loopFn)
-	}
-	
-	const handleMouseEnter = () => {
-		elementsRef.current.forEach(({ logo }) => {
-			changeOpacity(logo)
-		})
-	}
-	
-	const handleMouseLeave = () => {
-		elementsRef.current.forEach(({ logo }) => {
-			resetOpacity(logo)
-		})
-	}
-	
-	const renderedLogosSvgs2 = Object.keys(LOGOS_SVGS).map((logoName, index) => (
-		<S.LogoSvgWrapper
-			ref={el => elementsRef.current[index] = { ...elementsRef.current[index], logoWrapper: el }}
+			key={logoName}
+			ref={setRefOfElements('logoWrapper', index)}
 		>
 			<div className="customBorder"></div>
 			<i 
-				ref={el => elementsRef.current[index] = {...elementsRef.current[index], logo: el}} 
+				ref={setRefOfElements('logo', index)} 
 				className={LOGOS_SVGS[logoName]}
 			></i>
 		</S.LogoSvgWrapper>
@@ -126,10 +67,10 @@ export const Techs = () => {
 	return (
 		<S.Techs
 			onMouseEnter={handleMouseEnter}
-			onMouseMove={handleMouseMove3}
+			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
 		>
-			{renderedLogosSvgs2}
+			{renderedLogosSvgs}
 		</S.Techs>
 	)
 }
