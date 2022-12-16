@@ -15,7 +15,9 @@ export const IntroSection = () => {
 			})
 		}
 		
-		return () => canRunEffectRef.current = false
+		return () => {
+			canRunEffectRef.current = false
+		}
 	}, [])
 	
 	return (

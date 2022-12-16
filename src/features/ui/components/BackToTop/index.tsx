@@ -5,7 +5,7 @@ import { animateByFrame } from '../../../../common/utils/animate-by-frame'
 export const BackToTop = () => {
 	const [isVisible, setIsVisible] = useState(false)
 	
-	const animateScroll = startScrollPos => progressPercent => 
+	const animateScroll = (startScrollPos: number) => (progressPercent: number) => 
 		window.scrollTo(0, startScrollPos - (progressPercent * startScrollPos))
 	
 	const handleClick = () => {
@@ -13,13 +13,13 @@ export const BackToTop = () => {
 		animateByFrame(animateScroll(startScrollPos), 250)
 	}
 	
-	const checkIfScrollingUp = (startScrollPos) => {
+	const checkIfScrollingUp = (startScrollPos: number) => {
 		const currentScrollPos = document.documentElement.scrollTop
 		const isScrollingUp = (currentScrollPos - startScrollPos) < 0
 		return isScrollingUp ? true : false
 	}
 	
-	const trackScrollPos = (startScrollPos) => () => {
+	const trackScrollPos = (startScrollPos: number) => () => {
 		const isScrollingUp = checkIfScrollingUp(startScrollPos)
 		startScrollPos = document.documentElement.scrollTop
 		setIsVisible(isScrollingUp)

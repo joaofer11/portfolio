@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const BackToTop = styled.button`
+interface BackToTopProps {
+	variant: boolean;
+}
+
+export const BackToTop = styled.button<BackToTopProps>`
 	position: fixed;
 	bottom: 1.428rem;
 	right: 1.428rem;

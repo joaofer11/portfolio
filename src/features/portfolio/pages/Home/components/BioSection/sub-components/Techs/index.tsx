@@ -1,14 +1,26 @@
-import { useRef } from 'react'
+import { useRef, MouseEvent } from 'react'
 import { LOGOS_SVGS } from './data'
 import { animateByFrame } from '../../../../../../../../common/utils/animate-by-frame'
 import * as S from './styles'
 
+type LogoSvgsKeys = keyof typeof LOGOS_SVGS
+
+interface PointerPos {
+	x: number;
+	y: number;
+}
+
+interface ElementsRef {
+	logoWrapper: HTMLElement;
+	logo: HTMLElement;
+}
+
 export const Techs = () => {
-	const elementsRef = useRef([])
+	const elementsRef = useRef<ElementsRef[]>([])
 	
-	const getElRect = (el) => el.getBoundingClientRect()
+	const getElRect = (el: HTMLElement) => el.getBoundingClientRect()
 	
-	const moveRadialGradientAtCss = (pointerPos) => (els) => {
+	const moveRadialGradientAtCss = (pointerPos: PointerPos) => (els: ElementsRef) => {
 		const logoWrapperPos = getElRect(els.logoWrapper)
 		const logoPos = getElRect(els.logo)
 		
@@ -28,17 +40,17 @@ export const Techs = () => {
 			.setProperty('--pointerYOffset', `${pointerPos.y - logoPos.y}px`)
 	}
 	
-	const decreaseOpacity = els => progressPercent =>
-		els.logoWrapper.style.setProperty('--opacity', 1 - progressPercent)
+	const decreaseOpacity = (els: ElementsRef) => (progressPercent: number) =>
+		els.logoWrapper.style.setProperty('--opacity', String(1 - progressPercent))
 	
-	const increaseOpacity = els => progressPercent =>
-		els.logoWrapper.style.setProperty('--opacity', progressPercent)
+	const increaseOpacity = (els: ElementsRef) => (progressPercent: number) =>
+		els.logoWrapper.style.setProperty('--opacity', String(progressPercent))
 	
 	const handleMouseLeave = () => elementsRef.current.forEach(els => {
 		animateByFrame(decreaseOpacity(els), 500)
 	})
 	
-	const handleMouseMove = (e) => {
+	const handleMouseMove = (e: MouseEvent) => {
 		const { clientX: x, clientY: y } = e
 		elementsRef.current.forEach(moveRadialGradientAtCss({ x, y }))
 	}
@@ -48,19 +60,19 @@ export const Techs = () => {
 		animateByFrame(increaseOpacity(els), 500)
 	})
 	
-	const setRefOfElements = (name, index) => el => {
+	const setRefOfElements = (name: string, index: number) => (el: unknown) => {
 		elementsRef.current[index] = { ...elementsRef.current[index], [name]: el }
 	}
 	
 	const renderedLogosSvgs = Object.keys(LOGOS_SVGS).map((logoName, index) => (
 		<S.LogoSvgWrapper
 			key={logoName}
-			ref={setRefOfElements('logoWrapper', index)}
+			ref={setRefOfElements('logoWrapper', index) as (el: HTMLDivElement) => void}
 		>
 			<div className="customBorder"></div>
 			<i 
 				ref={setRefOfElements('logo', index)} 
-				className={LOGOS_SVGS[logoName]}
+				className={LOGOS_SVGS[logoName as LogoSvgsKeys]}
 			></i>
 		</S.LogoSvgWrapper>
 	))

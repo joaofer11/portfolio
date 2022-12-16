@@ -1,7 +1,7 @@
-export const animateByFrame = (fn, duration) => {
-	let startTimestamp = null
+export const animateByFrame = (fn: Function, duration: number) => {
+	let startTimestamp: null | number = null
 	
-	const loopFn = (currentTimestamp) => {
+	const loopFn = (currentTimestamp: number) => {
 		if (!startTimestamp) startTimestamp = currentTimestamp
 		const msPassed = currentTimestamp - startTimestamp
 		const progressPercent = msPassed / duration
