@@ -9,6 +9,7 @@ export const Home = () => {
 			<IntroSection />
 			<SeparatorSvg />
 			<BioSection />
+			<SeparatorSvg />
 		</S.Home>
 	)
 }

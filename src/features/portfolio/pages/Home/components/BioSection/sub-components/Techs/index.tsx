@@ -44,6 +44,7 @@ export const Techs = () => {
 	}
 	
 	const handleMouseEnter = () => elementsRef.current.forEach(els => {
+		console.log('entrou')
 		animateByFrame(increaseOpacity(els), 500)
 	})
 	

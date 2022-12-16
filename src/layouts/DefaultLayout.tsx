@@ -1,4 +1,4 @@
-import { Header } from '../features/ui'
+import { Header, Footer } from '../features/ui'
 import { Outlet } from 'react-router-dom'
 
 export const DefaultLayout = () => {
@@ -6,6 +6,7 @@ export const DefaultLayout = () => {
 		<>
 			<Header />
 			<Outlet />
+			<Footer />
 		</>
 	)
 }
