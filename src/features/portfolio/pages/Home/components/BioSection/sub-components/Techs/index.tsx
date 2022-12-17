@@ -1,6 +1,7 @@
-import { useEffect, useRef, MouseEvent } from 'react'
+import { useEffect, useRef, MouseEvent, TouchEvent } from 'react'
 import { LOGOS_SVGS } from './data'
 import { animateByFrame } from '../../../../../../../../common/utils/animate-by-frame'
+import { throttle } from '../../../../../../../../common/utils/throttle'
 import * as S from './styles'
 
 type LogoSvgsKeys = keyof typeof LOGOS_SVGS
@@ -17,17 +18,6 @@ interface ElementsRef {
 
 export const Techs = () => {
 	const elementsRef = useRef<ElementsRef[]>([])
-	const hasAMousePointerRef = useRef<null | false | true>(null)
-	
-	const checkIfHasAMousePointer = (e) => {
-		hasAMousePointerRef.current = false
-		console.log('kkkk')
-	}
-	
-	useEffect(() => {
-		window.addEventListener('touchmove', checkIfHasAMousePointer)
-		return () => window.removeEventListener('touchmove', checkIfHasAMousePointer)
-	}, [])
 	
 	const getElRect = (el: HTMLElement) => el.getBoundingClientRect()
 	
@@ -58,7 +48,6 @@ export const Techs = () => {
 		els.logoWrapper.style.setProperty('--opacity', String(progressPercent))
 	
 	const handleMouseLeave = () => elementsRef.current.forEach(els => {
-		if (!hasAMousePointerRef.current) return
 		animateByFrame(decreaseOpacity(els), 500)
 	})
 	
@@ -67,8 +56,7 @@ export const Techs = () => {
 		elementsRef.current.forEach(moveRadialGradientAtCss({ x, y }))
 	}
 	
-	const handleMouseEnter = (e) => elementsRef.current.forEach(els => {
-		if (!hasAMousePointerRef.current) return
+	const handleMouseEnter = () => elementsRef.current.forEach(els => {
 		animateByFrame(increaseOpacity(els), 500)
 	})
 	

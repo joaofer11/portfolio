@@ -13,7 +13,6 @@ export const throttle = <Args>(fn: (...args: Args[]) => any, delay: number = 100
 	
 	return (...args: Args[]) => {
 		if (shouldAwait) return pendingArgs = args
-		console.log(args)
 		fn(...args)
 		shouldAwait = true
 		setTimeout(timeoutFn, delay)

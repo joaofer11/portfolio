@@ -1,5 +1,6 @@
 export const sizes = {
-	'sm': '(min-width: 320px)',
+	'xs': '(min-width: 320px)',
+	'sm': '(min-width: 576px)',
 	'md': '(min-width: 768px)',
 	'lg': '(min-width: 992px)',
 }

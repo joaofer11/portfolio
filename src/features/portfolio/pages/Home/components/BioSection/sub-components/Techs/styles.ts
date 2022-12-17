@@ -1,10 +1,16 @@
 import styled from 'styled-components'
+import { sizes } from '../../../../../../../../styles/breakpoints'
 
 export const Techs = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 0.714rem;
+	pointer-events: none;
+	
+	@media ${sizes.lg} {
+		pointer-events: auto;
+	}
 `
 
 export const LogoSvgWrapper = styled.div`
