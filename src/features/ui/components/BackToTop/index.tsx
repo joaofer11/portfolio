@@ -1,6 +1,7 @@
 import * as S from './styles'
 import { useState, useEffect } from 'react'
 import { animateByFrame } from '../../../../common/utils/animate-by-frame'
+import { throttle } from '../../../../common/utils/throttle'
 
 export const BackToTop = () => {
 	const [isVisible, setIsVisible] = useState(false)
@@ -25,11 +26,13 @@ export const BackToTop = () => {
 		setIsVisible(isScrollingUp)
 	}
 	
-	const handleScroll = trackScrollPos(0)
+	const handleScroll = throttle<Event>(trackScrollPos(0), 500)
 	
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
-		return () => window.removeEventListener('scroll', handleScroll)
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
 	}, [])
 	
 	return (
