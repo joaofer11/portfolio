@@ -18,7 +18,6 @@ export const LogoSvgWrapper = styled.div`
 	height: 7.5rem;
 	
 	border-radius: 4px;
-	
 	font-size: 4.017rem;
 	
 	background-color: ${({ theme }) => theme['gray-blue-950']};
