@@ -2,11 +2,8 @@ import styled from 'styled-components'
 
 export const Home = styled.main`
 	> svg {
-		&:first-child {
-			margin-bottom: 0.714rem;
-		}
-		&:last-child {
-			margin-top: 2.142rem;
+		&:nth-of-type(2) {
+			margin-top: 1.428rem;
 		}
 	}
 `
