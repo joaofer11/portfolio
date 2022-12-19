@@ -1,9 +1,13 @@
 import * as S from './styles'
 import testImg from './test_image.jpg'
-import { ArrowSvg } from '../../../../styles/svg-components/ArrowSvg'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectCount, incrementCount } from '../../portfolio-slice'
 import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
 
 export const Projects = () => {
+	const count = useSelector(selectCount)
+	const dispatch = useDispatch()
+	
 	return (
 		<S.Main>
 			<ul>
@@ -24,6 +28,8 @@ export const Projects = () => {
 					<S.RedirectBtn>ver no github</S.RedirectBtn>
 				</S.ProjectCard>
 			</ul>
+			
+			<button onClick={() => dispatch(incrementCount())}>{count}</button>
 		</S.Main>
 	)
 }
