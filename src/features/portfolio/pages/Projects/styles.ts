@@ -99,7 +99,7 @@ export const FeaturesList = styled.ul`
 	}
 `
 
-export const RedirectBtn = styled.button`
+export const RedirectLink = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -1,5 +1,4 @@
 import * as S from './styles'
-import testImg from './test_image.jpg'
 import { PROJECTS } from './data'
 import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
 
@@ -24,7 +23,9 @@ export const Projects = () => {
 							))}
 						</S.FeaturesList>
 						
-						<S.RedirectBtn>ver no github</S.RedirectBtn>
+						<S.RedirectLink href={project.linkUrl} target="_blank">
+							ver no github
+						</S.RedirectLink>
 					</S.ProjectCard>
 				))}
 			</ul>
