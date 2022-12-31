@@ -88,13 +88,12 @@ export const FeaturesList = styled.ul`
 	color: ${({ theme }) => theme['gray-blue-200']};
 	
 	> li {
-		display: flex;
-		align-items: center;
-		gap: 0.357rem;
-		
-		> span {
-			color: ${({ theme }) => theme['blue-400']};
+		&::before {
+			content: ">";
+			display: inline-block;
+			margin-right: 0.357rem;
 			text-shadow: 0px 0px 5px;
+			color: ${({ theme }) => theme['blue-400']};
 		}
 	}
 `

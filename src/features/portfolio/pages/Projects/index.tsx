@@ -17,7 +17,6 @@ export const Projects = () => {
 						<S.FeaturesList>
 							{project.features.map(feature => (
 								<li key={feature.id}>
-									<span>&gt;</span>
 									{feature.label}
 								</li>
 							))}
