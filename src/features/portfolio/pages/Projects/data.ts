@@ -1,4 +1,4 @@
-export const PROJECTS = [
+export const PROJECTS_DATA = [
 	{
 		id: 1,
 		name: 'Coffee Delivery',
