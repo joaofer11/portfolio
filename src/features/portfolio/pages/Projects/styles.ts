@@ -2,27 +2,18 @@ import styled from 'styled-components'
 
 export const Main = styled.main`
 	margin: 1.428rem 0;
+	padding: 0 1.428rem;
 	
-	section {
-		padding: 0 1.428rem;
-	}
-	
-	> section:first-child {
-		> h1 {
-			font-weight: 700;
-			font-size: 1.714rem;
-			font-family: 'Ubuntu', sans-serif;
-			
-			line-height: 1.3;
-			text-transform: uppercase;
-			color: ${({ theme }) => theme['gray-blue-400']};
-			
-			&::after {
-				content: ".";
-				font-size: 3.428rem;
-				line-height: 0;
-			}
-		}
+	> h1 {
+		width: 100%;
+		margin-bottom: 1.428rem;
+		
+		font-weight: 700;
+		font-size: 2rem;
+		font-family: 'Ubuntu', sans-serif;
+		
+		line-height: 1.3;
+		color: ${({ theme }) => theme['gray-blue-400']};
 	}
 	
 	ul {
