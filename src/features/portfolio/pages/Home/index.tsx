@@ -1,17 +1,15 @@
-import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
-import { IntroSection } from './components/IntroSection'
-import { BioSection } from './components/BioSection'
 import { BackToTop } from '../../../ui'
-import * as S from './styles'
+import { BioSection } from './components/BioSection'
+import { IntroSection } from './components/IntroSection'
+import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
 
 export const Home = () => {
 	return (
-		<S.Home>
+		<main style={{margin: '1.428rem 0'}}>
 			<IntroSection />
 			<SeparatorSvg />
 			<BioSection />
-			<SeparatorSvg />
 			<BackToTop />
-		</S.Home>
+		</main>
 	)
 }

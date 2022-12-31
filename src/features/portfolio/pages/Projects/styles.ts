@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Main = styled.main`
-	margin: 1.428rem 0 2rem;
+	margin: 1.428rem 0;
 	padding: 0 1.428rem;
 	
 	> ul {
