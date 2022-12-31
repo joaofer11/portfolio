@@ -4,7 +4,7 @@ export const Main = styled.main`
 	margin: 1.428rem 0;
 	padding: 0 1.428rem;
 	
-	> h1 {
+	h1 {
 		width: 100%;
 		margin-bottom: 1.428rem;
 		
