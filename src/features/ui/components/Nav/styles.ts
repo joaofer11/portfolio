@@ -17,7 +17,7 @@ export const Nav = styled.nav`
 			
 			transition: color 350ms ease-out;
 			
-			&:hover {
+			&:hover, &.active {
 				color: ${({ theme }) => theme['gray-blue-200']};
 			}
 		}
