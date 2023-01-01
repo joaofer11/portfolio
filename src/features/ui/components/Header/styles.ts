@@ -10,5 +10,6 @@ export const Header = styled.header`
 	
 	> svg {
 		width: 3.214rem;
+		cursor: pointer;
 	}
 `
