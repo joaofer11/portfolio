@@ -25,6 +25,10 @@ export const GlobalStyles = createGlobalStyle`
 		background-color: ${({ theme }) => theme['gray-blue-950']};
 	}
 	
+	#root {
+		overflow-x: hidden;
+	}
+	
 	body, button {
 		font-size: 1rem;
 		font-weight: 400;
