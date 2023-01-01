@@ -7,7 +7,7 @@ import { AppearingAnimation } from '../../../../common/components/AppearingAnima
 export const Projects = () => {
 	return (
 		<S.Main>
-			<AppearingAnimation position="left">
+			<AppearingAnimation active position="left">
 				<h1>Confira alguns projetos que desenvolvi:</h1>
 			</AppearingAnimation>
 			

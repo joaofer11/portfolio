@@ -1,4 +1,5 @@
 import * as S from './styles'
+import { useState, useEffect, useRef } from 'react'
 import { PROJECTS_DATA } from '../../data'
 import { AppearingAnimation } from '../../../../../../common/components/AppearingAnimation'
 
@@ -9,6 +10,10 @@ interface IProjectCardProps {
 }
 
 export const ProjectCard = ({ projectData }: IProjectCardProps) => {
+	const [canElAppear, setCanElAppear] = useState(false)
+	const elRef = useRef<HTMLLIElement>(null)
+	const elHasAppearedRef = useRef(false)
+	
 	const {
 		id,
 		name,
@@ -17,12 +22,37 @@ export const ProjectCard = ({ projectData }: IProjectCardProps) => {
 		description,
 		thumbnailPath,
 	} = projectData
-	
 	const isAnOddNumber = id % 2 !== 0
 	
+	const checkIfElementCanAppear = () => {
+		const distOfElFromTop = elRef.current.getBoundingClientRect().y
+		const innerHeight = window.innerHeight
+		
+		if (distOfElFromTop - innerHeight <= -25) {
+			setCanElAppear(true)
+			elHasAppearedRef.current = true
+		}
+	}
+	
+	const handleScroll = () => {
+		if (!elHasAppearedRef.current) checkIfElementCanAppear()
+	}
+	
+	useEffect(() => {
+		checkIfElementCanAppear()
+		window.addEventListener('scroll', handleScroll)
+		
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
+	
 	return (
-		<AppearingAnimation position={isAnOddNumber ? 'right' : 'left'}>
-			<S.ProjectCard>
+		<AppearingAnimation
+			active={canElAppear}
+			position={isAnOddNumber ? 'right' : 'left'}
+		>
+			<S.ProjectCard ref={elRef}>
 				<S.ProjectImg src={thumbnailPath} />
 				<S.ProjectName>{name}</S.ProjectName>
 				<S.ProjectDescription>
