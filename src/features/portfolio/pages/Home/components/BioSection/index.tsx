@@ -15,7 +15,7 @@ export const BioSection = () => {
 				</S.Content>
 				
 				<S.Content>
-					Entre em contato comigo pelo <a href="https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/" target="_blank">Linkedin</a> ou <a target="_blank">Discord (joaofer11#2087)</a>, e veja
+					Entre em contato comigo pelo <a href="https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/" target="_blank">Linkedin</a> ou <a id="discord-nick">Discord (joaofer11#2087)</a>, e veja
 					o que ando desenvolvendo no <a href="https://github.com/joaofer11" target="_blank">GitHub</a>.
 				</S.Content>
 			</BaseArticle>

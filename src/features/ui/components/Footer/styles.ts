@@ -25,5 +25,13 @@ export const SocialNetworks = styled.ul`
 	align-content: baseline;
 	gap: 0.714rem;
 	font-size: 1.25rem;
-	color: ${({ theme }) => theme['gray-blue-850']};
+	
+	a {
+		color: ${({ theme }) => theme['gray-blue-850']};
+		transition: color 300ms ease;
+		
+		&:hover {
+			color: ${({ theme }) => theme['blue-350']};
+		}
+	}
 `
