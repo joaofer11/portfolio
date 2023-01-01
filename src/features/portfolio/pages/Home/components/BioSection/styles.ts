@@ -16,6 +16,6 @@ export const Content = styled.p`
 	
 	> a {
 		font-weight: 500;
-		color: ${({ theme }) => theme['blue-400']};
+		color: ${({ theme }) => theme['blue-350']};
 	}
 `
