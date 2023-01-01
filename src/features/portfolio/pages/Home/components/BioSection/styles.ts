@@ -13,4 +13,9 @@ export const Content = styled.p`
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.5;
 	color: ${({ theme }) => theme['gray-blue-550']};
+	
+	> a {
+		font-weight: 500;
+		color: ${({ theme }) => theme['blue-400']};
+	}
 `
