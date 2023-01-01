@@ -19,7 +19,7 @@ export const Main = styled.main`
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 1.428rem;
+		gap: 0.714rem;
 		
 		width: 100%;
 		height: 100%;
