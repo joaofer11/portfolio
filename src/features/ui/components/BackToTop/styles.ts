@@ -19,7 +19,7 @@ export const BackToTop = styled.button<BackToTopProps>`
 	height: 3.125rem;
 	
 	background-color: ${({ theme }) => theme['gray-blue-950']};
-	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 	transition: all 250ms ease;
 	
 	${({ variant }) => variant === true ? `
