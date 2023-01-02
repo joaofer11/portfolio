@@ -1,18 +1,19 @@
-import { useState, useRef, useEffect } from 'react'
 import * as S from './styles'
+import { useState, useEffect, useRef } from 'react'
 
 export const IntroSection = () => {
 	const canRunEffectRef = useRef(true)
-	const [text2, setText] = useState('')
-	const text = 'Me Chamo João Fernandes, e sou um desenvolvedor Front-End'
+	const [currentTextState, setCurrentTextState] = useState('')
+	const finalTextState = 'Me Chamo João Fernandes, e sou um desenvolvedor Front-End'
 	
 	useEffect(() => {
 		if (canRunEffectRef.current) {
-			Array.from(text).forEach((letter, index) => {
-				setTimeout(() => {
-					setText((prevState) => prevState + letter)
-				}, (index + 8) * 100)
-			})
+			Array.from(finalTextState).forEach((letter, index) =>
+				setTimeout(
+					() => setCurrentTextState((prevState) => prevState + letter), 
+					(index + 8) * 100
+				)
+			)
 		}
 		
 		return () => {
@@ -23,7 +24,7 @@ export const IntroSection = () => {
 	return (
 		<S.IntroSection>
 			<span> Hello world...</span>
-			<p>{text2}</p>
+			<p>{currentTextState}</p>
 		</S.IntroSection>
 	)
 }
