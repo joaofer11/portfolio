@@ -15,7 +15,7 @@ export const Nav = styled.nav`
 			text-transform: uppercase;
 			color: ${({ theme }) => theme['gray-blue-800']};
 			
-			transition: color 350ms ease-out;
+			transition: color 300ms ease;
 			
 			&:hover, &.active {
 				color: ${({ theme }) => theme['gray-blue-200']};
