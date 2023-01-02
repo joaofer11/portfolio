@@ -21,10 +21,17 @@ export const BackToTop = () => {
 		return isScrollingUp ? true : false
 	}
 	
+	const checkIfScrollIsNearOfStart = () => {
+		const { scrollTop } = document.documentElement
+		return scrollTop <= 50 ? true : false
+	}
+	
 	const trackScrollPos = (startScrollPos: number) => () => {
 		const isScrollingUp = checkIfScrollingUp(startScrollPos)
+		const isScrollNearOfStart = checkIfScrollIsNearOfStart()
+		setIsVisible(isScrollingUp && !isScrollNearOfStart)
+		
 		startScrollPos = document.documentElement.scrollTop
-		setIsVisible(isScrollingUp)
 	}
 	
 	const handleScroll = throttle<Event>(trackScrollPos(0), 500)
