@@ -1,7 +1,8 @@
 import * as S from './styles'
+import { createPortal } from 'react-dom'
 import { useState, useEffect } from 'react'
-import { animateByFrame } from '../../../../common/utils/animate-by-frame'
 import { throttle } from '../../../../common/utils/throttle'
+import { animateByFrame } from '../../../../common/utils/animate-by-frame'
 
 export const BackToTop = () => {
 	const [isVisible, setIsVisible] = useState(false)
@@ -36,10 +37,13 @@ export const BackToTop = () => {
 	}, [])
 	
 	return (
-		<S.BackToTop 
-			onClick={handleClick}
-			variant={isVisible}
-		>
-		</S.BackToTop>
+		createPortal(
+			<S.BackToTop 
+				onClick={handleClick}
+				variant={isVisible}
+			>
+			</S.BackToTop>,
+			document.getElementById('back-to-top')
+		)
 	)
 }

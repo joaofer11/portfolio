@@ -1,4 +1,3 @@
-import { BackToTop } from '../../../ui'
 import { BioSection } from './components/BioSection'
 import { IntroSection } from './components/IntroSection'
 import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
@@ -9,7 +8,6 @@ export const Home = () => {
 			<IntroSection />
 			<SeparatorSvg />
 			<BioSection />
-			<BackToTop />
 		</main>
 	)
 }

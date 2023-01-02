@@ -1,5 +1,5 @@
-import { Header, Footer } from '../features/ui'
 import { Outlet } from 'react-router-dom'
+import { Header, Footer, BackToTop } from '../features/ui'
 import { SeparatorSvg } from '../styles/svg-components/SeparatorSvg'
 
 export const DefaultLayout = () => {
@@ -9,6 +9,7 @@ export const DefaultLayout = () => {
 			<Outlet />
 			<SeparatorSvg />
 			<Footer />
+			<BackToTop />
 		</>
 	)
 }
