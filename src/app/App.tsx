@@ -1,3 +1,4 @@
+import { TypewriterEffectCtxProvider } from '../features/portfolio/contexts/TypewriterEffectCtx'
 import { DefaultLayout } from '../layouts/DefaultLayout'
 import { defaultTheme } from '../styles/themes/default'
 import { ThemeProvider } from 'styled-components'
@@ -12,7 +13,9 @@ export const App = () => {
   			<GlobalStyles />
   			
   			<BrowserRouter>
-   			<Router/>
+  				<TypewriterEffectCtxProvider>
+   				<Router/>
+   			</TypewriterEffectCtxProvider>
   			</BrowserRouter>
    	</ThemeProvider>
     </>
