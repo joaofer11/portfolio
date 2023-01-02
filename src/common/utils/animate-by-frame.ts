@@ -1,3 +1,6 @@
+const easeInOutCubic = (x: number) => 
+	(x < 0.5) ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2
+
 export const animateByFrame = (fn: Function, duration: number) => {
 	let startTimestamp: null | number = null
 	
@@ -5,7 +8,7 @@ export const animateByFrame = (fn: Function, duration: number) => {
 		if (!startTimestamp) startTimestamp = currentTimestamp
 		const msPassed = currentTimestamp - startTimestamp
 		const progressPercent = msPassed / duration
-		fn(progressPercent)
+		fn(easeInOutCubic(progressPercent))
 		
 		if (progressPercent < 1) requestAnimationFrame(loopFn)
 	}

@@ -12,7 +12,7 @@ export const BackToTop = () => {
 	
 	const handleClick = () => {
 		const startScrollPos = document.documentElement.scrollTop
-		animateByFrame(animateScroll(startScrollPos), 250)
+		animateByFrame(animateScroll(startScrollPos), 900)
 	}
 	
 	const checkIfScrollingUp = (startScrollPos: number) => {
