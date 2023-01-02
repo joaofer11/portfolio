@@ -5,7 +5,7 @@ import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
 
 export const Home = () => {
 	return (
-		<main style={{margin: '1.428rem 0'}}>
+		<main style={{ margin: 'var(--spacing-sm) 0' }}>
 			<IntroSection />
 			<SeparatorSvg />
 			<BioSection />

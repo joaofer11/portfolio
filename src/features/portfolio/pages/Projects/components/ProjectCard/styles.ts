@@ -14,7 +14,7 @@ export const ProjectCard = styled.li`
 	
 	border: 1px solid ${({ theme }) => theme['gray-blue-900']};
 	border-radius: 4px;
-	padding: 1.428rem;
+	padding: var(--spacing-sm);
 	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 	
 	&::before {
@@ -25,7 +25,7 @@ export const ProjectCard = styled.li`
 		height: 3px;
 		opacity: 0.05;
 		
-		margin: 0.714rem 0;
+		margin: var(--spacing-xs) 0;
 		border-radius: 1px;
 		background-color: ${({ theme }) => theme['gray-blue-500']};
 	}
@@ -40,10 +40,10 @@ export const ProjectImg = styled.img`
 `
 
 export const ProjectName = styled.h2`
-	margin: 0.714rem 0 0.357rem;
+	margin: var(--spacing-xs) 0 var(--spacing-xxs);
 	
 	font-weight: 700;
-	font-size: 1.285rem;
+	font-size: var(--font-size-md);
 	font-family: 'Ubuntu', sans-serif;
 	line-height: 1.3;
 	text-transform: uppercase;
@@ -53,7 +53,7 @@ export const ProjectName = styled.h2`
 
 export const ProjectDescription = styled.p`
 	font-weight: 400;
-	font-size: 1rem;
+	font-size: var(--font-size-xs);
 	font-family: 'Ubuntu', sans-serif;
 	line-height: 1.3;
 	
@@ -63,11 +63,11 @@ export const ProjectDescription = styled.p`
 export const FeaturesList = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 0.714rem;
-	margin-bottom: 1.428rem;
+	gap: var(--spacing-xs);
+	margin-bottom: var(--spacing-sm);
 	
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: var(--font-size-xs);
 	font-family: 'Ubuntu', sans-serif;
 	line-height: 1.3;
 	
@@ -77,7 +77,7 @@ export const FeaturesList = styled.ul`
 		&::before {
 			content: ">";
 			display: inline-block;
-			margin-right: 0.357rem;
+			margin-right: var(--spacing-xxs);
 			text-shadow: 0px 0px 5px;
 			color: ${({ theme }) => theme['blue-400']};
 		}
@@ -92,10 +92,10 @@ export const RedirectLink = styled.a`
 	width: 100%;
 	border: 0;
 	border-radius: 4px;
-	padding: 0.714rem 1.428rem;
+	padding: var(--spacing-xs) var(--spacing-sm);
 	
 	font-weight: 700;
-	font-size: 1rem;
+	font-size: var(--font-size-xs);
 	font-family: 'Ubuntu', sans-serif;
 	line-height: 1.3;
 	text-transform: uppercase;

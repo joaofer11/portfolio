@@ -19,14 +19,14 @@ export const IntroSection = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0 1.428rem;
+	padding: 0 var(--spacing-sm);
 	
 	> span {
 		display: block;
-		margin-bottom: 0.714rem;
+		margin-bottom: var(--spacing-xs);
 		
 		font-weight: 400;
-		font-size: 0.857rem;
+		font-size: var(--font-size-xs);
 		font-family: 'Roboto Mono', monospace;
 		
 		line-height: 1.5;
@@ -46,7 +46,7 @@ export const IntroSection = styled.section`
 		width: 100%;
 		
 		font-weight: 500;
-		font-size: 1.142rem;
+		font-size: var(--font-size-md);
 		font-family: 'Roboto Mono', monospace;
 		
 		line-height: 1.5;

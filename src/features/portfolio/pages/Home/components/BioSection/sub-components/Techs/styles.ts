@@ -5,7 +5,7 @@ export const Techs = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 0.714rem;
+	gap: var(--spacing-xs);
 	pointer-events: none;
 	
 	@media ${sizes.lg} {
@@ -14,17 +14,17 @@ export const Techs = styled.div`
 `
 
 export const LogoSvgWrapper = styled.div`
-	position: relative;
 	--opacity;
 	
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 9.642rem;
-	height: 7.5rem;
+	width: 8.4375rem;
+	height: 6.5625rem;
 	
 	border-radius: 4px;
-	font-size: 4.017rem;
+	font-size: 3.75rem;
 	
 	background-color: ${({ theme }) => theme['gray-blue-950']};
 	background-image: radial-gradient(

@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const Main = styled.main`
-	margin: 1.428rem 0;
-	padding: 0 1.428rem;
+	margin: var(--spacing-sm) 0;
+	padding: 0 var(--spacing-sm);
 	
 	h1 {
 		width: 100%;
-		margin-bottom: 1.428rem;
+		margin-bottom: var(--spacing-sm);
 		
 		font-weight: 700;
-		font-size: 2rem;
+		font-size: 1.75rem;
 		font-family: 'Ubuntu', sans-serif;
 		
 		line-height: 1.3;
@@ -19,7 +19,7 @@ export const Main = styled.main`
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 0.714rem;
+		gap: var(--spacing-xs);
 		
 		width: 100%;
 		height: 100%;

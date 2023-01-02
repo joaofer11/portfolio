@@ -3,13 +3,13 @@ import styled from 'styled-components'
 export const BaseArticle = styled.article`
 	display: flex;
 	flex-direction: column;
-	gap: 0.714rem;
+	gap: var(--spacing-xs);
 `
 
 export const TitleWrapper = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 0.357rem;
+	gap: var(--spacing-xxs);
 	
 	&::before {
 		content: "";
@@ -24,7 +24,7 @@ export const TitleWrapper = styled.div`
 	}
 	
 	h1 {
-		font-size: 1.285rem;
+		font-size: var(--font-size-lg);
 		font-weight: 700;
 		font-family: 'Ubuntu', sans-serif;
 		

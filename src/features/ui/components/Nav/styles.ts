@@ -3,12 +3,12 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
 	> ul {
 		display: flex;
-		gap: 0.5rem;
+		gap: var(--spacing-xxs);
 		
 		a {
-			padding: 0.5rem;
+			padding: var(--spacing-xxs);
 			font-weight: 700;
-			font-size: 0.857rem;
+			font-size: var(--font-size-xs);
 			font-family: 'Ubuntu', sans-serif;
 			
 			line-height: initial;
