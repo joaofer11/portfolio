@@ -4,7 +4,7 @@ export const PROJECTS_DATA = [
 		name: 'Coffee Delivery',
 		thumbnailPath: '/images/coffee-delivery-thumbnail.jpg',
 		linkUrl: 'https://github.com/joaofer11/coffee-delivery',
-		description: 'Aplicação Web com foco em explorar a funcionalidade de shopping cart shopping cart.',
+		description: 'Aplicação web com foco em explorar a funcionalidade de shopping cart.',
 		features: [
 			{ id: 1, label: 'React, TypeScript' },
 			{ id: 2, label: 'Styled-Components, React Hook Form' }
@@ -15,7 +15,7 @@ export const PROJECTS_DATA = [
 		name: 'Github Blog',
 		thumbnailPath: '/images/github-blog-thumbnail.jpg',
 		linkUrl: 'https://github.com/joaofer11/github-blog',
-		description: 'Aplicação Web que lista issues de um repositório.',
+		description: 'Aplicação web que lista issues de um repositório.',
 		features: [
 			{ id: 1, label: 'React, TypeScript' },
 			{ id: 2, label: 'Styled-Components' }
@@ -37,7 +37,7 @@ export const PROJECTS_DATA = [
 		name: 'DT Money',
 		thumbnailPath: '/images/dt-money-thumbnail.jpg',
 		linkUrl: 'https://github.com/joaofer11/dt-money',
-		description: 'Aplicação Web de controle financeiro através de entradas e saídas.',
+		description: 'Aplicação web de controle financeiro através de entradas e saídas.',
 		features: [
 			{ id: 1, label: 'React, TypeScript' },
 			{ id: 2, label: 'Styled-Components, React Hook Form' },
