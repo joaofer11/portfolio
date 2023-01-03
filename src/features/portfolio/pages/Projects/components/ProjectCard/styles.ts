@@ -12,6 +12,8 @@ export const ProjectCard = styled.li`
 	grid-template-columns: auto;
 	grid-template-rows: auto;
 	
+	
+	max-width: 768px;
 	border: 1px solid ${({ theme }) => theme['gray-blue-900']};
 	border-radius: 4px;
 	padding: var(--spacing-sm);
