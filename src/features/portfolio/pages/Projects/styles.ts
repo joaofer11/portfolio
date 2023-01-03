@@ -6,6 +6,7 @@ export const Main = styled.main`
 	
 	h1 {
 		width: 100%;
+		max-width: 25ch;
 		margin-bottom: var(--spacing-sm);
 		
 		font-weight: 700;
