@@ -22,11 +22,17 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	
 	html {
-		font-size: 100%;
+		@media ${sizes.md} {
+			font-size: 200%;
+		}
 	}
 	
 	body {
 		min-height: 100vh;
+		min-width: 320px;
+		max-width: 1200px;
+		margin: 0 auto;
+		
 		background-color: ${({ theme }) => theme['gray-blue-950']};
 	}
 	
@@ -35,7 +41,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	
 	body, button {
-		font-size: 1rem;
+		font-size: var(--font-size-sm);
 		font-weight: 400;
 		font-family: 'Roboto', sans-serif;
 		
