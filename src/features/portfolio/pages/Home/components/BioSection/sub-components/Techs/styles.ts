@@ -33,8 +33,8 @@ export const LogoSvgWrapper = styled.div`
 	}
 	
 	@media ${sizes.sm} {
-		height: 8.125rem;
-		font-size: 4.625rem;
+		height: 5.416rem;
+		font-size: 3.083rem;
 		
 		&:last-child {
 			grid-column: initial;
