@@ -8,6 +8,7 @@ export const BioSection = styled.section`
 `
 
 export const Content = styled.p`
+	max-width: 75ch;
 	font-weight: 400;
 	font-size: var(--font-size-sm);
 	font-family: 'Roboto', sans-serif;

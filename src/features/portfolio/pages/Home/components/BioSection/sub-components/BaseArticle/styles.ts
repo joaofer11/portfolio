@@ -13,7 +13,7 @@ export const TitleWrapper = styled.div`
 	
 	&::before {
 		content: "";
-		width: 4px;
+		width: 0.25rem;
 		height: 1.285rem;
 		
 		${({ theme }) => `background-image: linear-gradient(

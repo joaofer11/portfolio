@@ -44,6 +44,7 @@ export const IntroSection = styled.section`
 	
 	> p {
 		width: 100%;
+		max-width: 30ch;
 		
 		font-weight: 500;
 		font-size: var(--font-size-md);
