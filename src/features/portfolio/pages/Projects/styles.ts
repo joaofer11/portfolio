@@ -7,19 +7,21 @@ export const Main = styled.main`
 	h1 {
 		width: 100%;
 		max-width: 25ch;
-		margin-bottom: var(--spacing-sm);
+		margin: 0 auto var(--spacing-sm);
 		
 		font-weight: 700;
 		font-size: 1.75rem;
 		font-family: 'Ubuntu', sans-serif;
 		
 		line-height: 1.3;
+		text-align: center;
 		color: ${({ theme }) => theme['gray-blue-400']};
 	}
 	
-	ul {
+	> ul {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: var(--spacing-xs);
 		
 		width: 100%;
