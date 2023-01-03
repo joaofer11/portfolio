@@ -22,6 +22,10 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	
 	html {
+		@media ${sizes.sm} {
+			font-size: 150%;
+		}
+		
 		@media ${sizes.md} {
 			font-size: 200%;
 		}
