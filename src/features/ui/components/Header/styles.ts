@@ -12,5 +12,21 @@ export const Header = styled.header`
 		width: 3rem;
 		height: 1.9375rem;
 		cursor: pointer;
+		
+		> #arrowLeft, #slash, #arrowRight {
+			transform-origin: center;
+			transition: transform 300ms ease;
+		}
+		
+		&:hover {
+			> #arrowLeft, #arrowRight {
+				transform: scaleX(0);
+			}
+			
+			> #slash {
+				transform: scale(1.25);
+			}
+		}
+		
 	}
 `
