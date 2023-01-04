@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Main = styled.main`
-	margin: var(--spacing-sm) 0;
-	padding: 0 var(--spacing-sm);
+	margin-top: var(--spacing-sm);
 	
 	h1 {
 		width: 100%;

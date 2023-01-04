@@ -19,7 +19,6 @@ export const IntroSection = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0 var(--spacing-sm);
 	
 	> span {
 		display: block;

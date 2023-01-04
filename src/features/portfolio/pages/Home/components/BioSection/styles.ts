@@ -4,7 +4,6 @@ export const BioSection = styled.section`
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-md);
-	padding: 0 var(--spacing-sm);
 `
 
 export const Content = styled.p`

@@ -32,9 +32,9 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	
 	body {
-		min-height: 100vh;
 		min-width: 320px;
 		max-width: 1200px;
+		min-height: 100vh;
 		margin: 0 auto;
 		
 		background-color: ${({ theme }) => theme['gray-blue-950']};
@@ -42,6 +42,7 @@ export const GlobalStyles = createGlobalStyle`
 	
 	#root {
 		overflow-x: hidden;
+		padding: 0 var(--spacing-sm);
 	}
 	
 	body, button {
