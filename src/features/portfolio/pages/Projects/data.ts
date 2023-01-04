@@ -1,6 +1,17 @@
 export const PROJECTS_DATA = [
 	{
 		id: 1,
+		name: 'Portfolio',
+		thumbnailPath: '/images/portfolio-thumbnail.jpg',
+		linkUrl: 'https://github.com/joaofer11/portfolio',
+		description: 'Página pessoal com o propósito de servir como portfolio.',
+		features: [
+			{ id: 1, label: 'React, TypeScript' },
+			{ id: 2, label: 'Styled-Components, Figma' }
+		]
+	},
+	{
+		id: 2,
 		name: 'Coffee Delivery',
 		thumbnailPath: '/images/coffee-delivery-thumbnail.jpg',
 		linkUrl: 'https://github.com/joaofer11/coffee-delivery',
@@ -11,7 +22,7 @@ export const PROJECTS_DATA = [
 		]
 	},
 	{
-		id: 2,
+		id: 3,
 		name: 'Github Blog',
 		thumbnailPath: '/images/github-blog-thumbnail.jpg',
 		linkUrl: 'https://github.com/joaofer11/github-blog',
@@ -22,7 +33,7 @@ export const PROJECTS_DATA = [
 		]
 	},
 	{
-		id: 3,
+		id: 4,
 		name: 'Music Player',
 		thumbnailPath: '/images/music-player-thumbnail.jpg',
 		linkUrl: 'https://github.com/joaofer11/music-player',
@@ -33,7 +44,7 @@ export const PROJECTS_DATA = [
 		]
 	},
 	{
-		id: 4,
+		id: 5,
 		name: 'DT Money',
 		thumbnailPath: '/images/dt-money-thumbnail.jpg',
 		linkUrl: 'https://github.com/joaofer11/dt-money',
