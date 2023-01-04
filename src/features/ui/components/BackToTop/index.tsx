@@ -50,7 +50,7 @@ export const BackToTop = () => {
 				variant={isVisible}
 			>
 			</S.BackToTop>,
-			document.getElementById('back-to-top')
+			document.getElementById('back-to-top')!
 		)
 	)
 }

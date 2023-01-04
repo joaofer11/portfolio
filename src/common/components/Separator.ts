@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components'
 
 interface IProps {
-	margin: string;
+	marginTop?: string;
+	marginBottom?: string;
 }
 
-export const Separator = styled.div<Props>`
+export const Separator = styled.div<IProps>`
 	width: 100%;
 	height: 1px;
 	opacity: 0.75;

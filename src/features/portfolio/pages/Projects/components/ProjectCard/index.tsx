@@ -19,7 +19,7 @@ export const ProjectCard = ({ projectData }: IProjectCardProps) => {
 	const isAnOddNumber = id % 2 !== 0
 	
 	const checkIfElementCanAppear = () => {
-		const distOfElFromTop = elRef.current.getBoundingClientRect().y
+		const distOfElFromTop = elRef.current!.getBoundingClientRect().y
 		const innerHeight = window.innerHeight
 		
 		if (distOfElFromTop - innerHeight <= -25) setCanElAppear(true)
