@@ -15,6 +15,22 @@ const greet = keyframes`
 	10%, 20% { transform: rotateZ(10deg); }
 `
 
+const greet2 = keyframes`
+	3% { transform: rotateZ(10deg); }
+	
+	6% { transform: rotateZ(-15deg); }
+	12% { transform: rotateZ(-17deg); }
+	18% { transform: rotateZ(-19deg); }
+	24% { transform: rotateZ(-17deg); }
+	
+	9% { transform: rotateZ(15deg); }
+	15% { transform: rotateZ(16deg); }
+	21% { transform: rotateZ(17deg); }
+	27% { transform: rotateZ(16deg); }
+	
+	30% { transform: rotateZ(0deg); }
+`
+
 export const IntroSection = styled.section`
 	display: flex;
 	flex-direction: column;
@@ -35,7 +51,7 @@ export const IntroSection = styled.section`
 		&::before {
 			content: "👋";
 			display: inline-block;
-			animation: ${greet} 5s ease 1.2s infinite;
+			animation: ${greet2} 7s ease-in-out 1.2s infinite;
 			transform-origin: 90% bottom;
 			transform-box: fill-box;
 		}
