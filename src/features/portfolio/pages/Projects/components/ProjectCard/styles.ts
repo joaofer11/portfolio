@@ -12,7 +12,6 @@ export const ProjectCard = styled.li`
 	grid-template-columns: auto;
 	grid-template-rows: auto;
 	
-	
 	max-width: 768px;
 	border: 1px solid ${({ theme }) => theme['gray-blue-900']};
 	border-radius: 4px;
@@ -36,6 +35,7 @@ export const ProjectCard = styled.li`
 export const ProjectImg = styled.img`
 	display: block;
 	width: 100%;
+	border: 1px solid ${({ theme }) => theme['gray-blue-925']};
 	border-radius: 4px;
 	
 	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1)
