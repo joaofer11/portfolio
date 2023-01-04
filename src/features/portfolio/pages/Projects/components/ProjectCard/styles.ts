@@ -24,7 +24,7 @@ export const ProjectCard = styled.li`
 		grid-area: separator;
 		
 		width: 30%;
-		height: 3px;
+		height: 0.1875rem;
 		opacity: 0.05;
 		
 		margin: var(--spacing-xs) 0;

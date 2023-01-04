@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router-dom'
+import { Separator } from '../common/components/Separator'
 import { Header, Footer, BackToTop } from '../features/ui'
-import { SeparatorSvg } from '../styles/svg-components/SeparatorSvg'
 
 export const DefaultLayout = () => {
 	return (
 		<>
 			<Header />
 			<Outlet />
-			<SeparatorSvg />
+			<Separator 
+				marginTop="2.5rem"
+				marginBottom="0"
+			/>
 			<Footer />
 			<BackToTop />
 		</>

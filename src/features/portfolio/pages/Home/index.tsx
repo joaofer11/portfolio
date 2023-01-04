@@ -1,14 +1,16 @@
 import { BioSection } from './components/BioSection'
 import { IntroSection } from './components/IntroSection'
-import { SeparatorSvg } from '../../../../styles/svg-components/SeparatorSvg'
+import { Separator } from '../../../../common/components/Separator'
 import { AppearingAnimation } from '../../../../common/components/AppearingAnimation'
 
 export const Home = () => {
 	return (
-		<main style={{ margin: 'var(--spacing-sm) 0' }}>
+		<main style={{ 
+			marginTop: 'var(--spacing-sm)',
+		}}>
 			<AppearingAnimation active position="top">
 				<IntroSection />
-				<SeparatorSvg />
+				<Separator />
 				<BioSection />
 			</AppearingAnimation>
 		</main>

@@ -6,7 +6,7 @@ export const Footer = styled.footer`
 	justify-content: center;
 	align-items: center;
 	gap: var(--spacing-xs);
-	padding-bottom: var(--spacing-sm);
+	padding: var(--spacing-sm) 0;
 	
 	> p {
 		font-family: 'Ubuntu', sans-serif;
