@@ -1,5 +1,5 @@
-import styled, { css, keyframes } from 'styled-components'
 import type { IProps } from './'
+import styled, { css, keyframes } from 'styled-components'
 
 const animeAppearing = keyframes`
 	to {

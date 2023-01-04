@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
 import * as S from './styles'
+import { ReactNode } from 'react'
 
 export interface IProps {
 	active: boolean;

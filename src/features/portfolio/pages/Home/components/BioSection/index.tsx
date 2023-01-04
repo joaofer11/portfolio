@@ -1,6 +1,6 @@
 import * as S from './styles'
-import { BaseArticle } from './sub-components/BaseArticle'
 import { Techs } from './sub-components/Techs'
+import { BaseArticle } from './sub-components/BaseArticle'
 
 export const BioSection = () => {
 	return (

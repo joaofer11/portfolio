@@ -1,10 +1,10 @@
-import { TypewriterEffectCtxProvider } from '../features/portfolio/contexts/TypewriterEffectCtx'
-import { DefaultLayout } from '../layouts/DefaultLayout'
-import { defaultTheme } from '../styles/themes/default'
-import { ThemeProvider } from 'styled-components'
-import { BrowserRouter } from 'react-router-dom'
-import { GlobalStyles } from '../styles/global'
 import { Router } from './Router'
+import { GlobalStyles } from '../styles/global'
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from '../styles/themes/default'
+import { DefaultLayout } from '../layouts/DefaultLayout'
+import { TypewriterEffectCtxProvider } from '../features/portfolio/contexts/TypewriterEffectCtx'
 
 export const App = () => {
   return (

@@ -16,7 +16,6 @@ export const Techs = styled.div`
 		pointer-events: auto;
 	}
 `
-	/*width: 8.4375rem;*/
 
 export const LogoSvgWrapper = styled.div`
 	--opacity;

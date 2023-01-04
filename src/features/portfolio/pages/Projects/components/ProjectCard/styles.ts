@@ -38,7 +38,7 @@ export const ProjectImg = styled.img`
 	border: 1px solid ${({ theme }) => theme['gray-blue-925']};
 	border-radius: 4px;
 	
-	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1)
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
 `
 
 export const ProjectName = styled.h2`
