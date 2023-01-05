@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { sizes } from '../../../../../../styles/breakpoints';
 
 const blink = keyframes`
 	0%, 100% { opacity: 1; }
@@ -27,9 +28,23 @@ const greet = keyframes`
 
 export const IntroSection = styled.section`
    display: flex;
-   flex-direction: column;
-   align-items: center;
+   justify-content: center;
 
+   > svg {
+      display: none;
+   }
+
+   @media ${sizes.lg} {
+      justify-content: space-between;
+
+      > svg {
+         display: block;
+         width: 10rem;
+      }
+   }
+`;
+
+export const Wrapper = styled.div`
    > span {
       display: block;
       margin-bottom: var(--spacing-xs);
@@ -52,7 +67,6 @@ export const IntroSection = styled.section`
    }
 
    > p {
-      width: 100%;
       max-width: 30ch;
 
       font-weight: 500;
@@ -68,6 +82,17 @@ export const IntroSection = styled.section`
          animation: ${blink} 1s steps(1, jump-end) infinite,
             ${stopBlink} 0s 800ms 1 forwards,
             ${blink} 1s steps(1, jump-end) 6.4s infinite;
+      }
+   }
+
+   @media ${sizes.lg} {
+      > span,
+      p {
+         text-align: left;
+      }
+
+      > p {
+         width: 85%;
       }
    }
 `;
