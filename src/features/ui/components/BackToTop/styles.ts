@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 interface BackToTopProps {
 	variant: boolean;
@@ -41,4 +41,4 @@ export const BackToTop = styled.button<BackToTopProps>`
 		border-left: 0.25rem solid var(--border-color);
 		transform: translateY(calc(0.25 * 0.857rem)) rotate(45deg);
 	}
-`
+`;

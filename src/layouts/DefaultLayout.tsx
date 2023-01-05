@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom'
-import { Separator } from '../common/components/Separator'
-import { Header, Footer, BackToTop } from '../features/ui'
+import { Outlet } from 'react-router-dom';
+import { Separator } from '../common/components/Separator';
+import { Header, Footer, BackToTop } from '../features/ui';
 
 export const DefaultLayout = () => {
 	return (
@@ -14,5 +14,5 @@ export const DefaultLayout = () => {
 			<Footer />
 			<BackToTop />
 		</>
-	)
-}
+	);
+};

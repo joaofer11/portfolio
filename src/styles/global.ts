@@ -1,5 +1,5 @@
-import { sizes } from './breakpoints'
-import { createGlobalStyle } from 'styled-components'
+import { sizes } from './breakpoints';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 	:root {
@@ -64,4 +64,4 @@ export const GlobalStyles = createGlobalStyle`
 	ul {
 		list-style: none;
 	}
-`
+`;

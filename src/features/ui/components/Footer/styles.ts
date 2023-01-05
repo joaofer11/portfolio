@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Footer = styled.footer`
 	display: flex;
@@ -16,7 +16,7 @@ export const Footer = styled.footer`
 		
 		color: ${({ theme }) => theme['gray-blue-800']};
 	}
-`
+`;
 
 export const SocialNetworks = styled.ul`
 	display: flex;
@@ -32,4 +32,4 @@ export const SocialNetworks = styled.ul`
 			color: ${({ theme }) => theme['blue-350']};
 		}
 	}
-`
+`;

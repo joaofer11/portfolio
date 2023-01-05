@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
-import * as S from './styles'
+import { ReactNode } from 'react';
+import * as S from './styles';
 
 interface BaseArticleProps {
 	title: string;
@@ -14,4 +14,4 @@ export const BaseArticle = ({ title, children }: BaseArticleProps) => (
 		
 		{children}
 	</S.BaseArticle>
-)
+);

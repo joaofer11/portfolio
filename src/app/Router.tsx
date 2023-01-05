@@ -1,7 +1,7 @@
-import { Home } from '../features/portfolio'
-import { Routes, Route } from 'react-router-dom'
-import { Projects } from '../features/portfolio'
-import { DefaultLayout } from '../layouts/DefaultLayout'
+import { Home } from '../features/portfolio';
+import { Routes, Route } from 'react-router-dom';
+import { Projects } from '../features/portfolio';
+import { DefaultLayout } from '../layouts/DefaultLayout';
 
 export const Router = () => (
 	<Routes>
@@ -10,4 +10,4 @@ export const Router = () => (
 			<Route path="projects" element={<Projects />} />
 		</Route>
 	</Routes>
-)
+);

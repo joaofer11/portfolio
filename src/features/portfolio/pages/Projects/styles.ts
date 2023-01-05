@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Main = styled.main`
 	margin-top: var(--spacing-sm);
@@ -26,4 +26,4 @@ export const Main = styled.main`
 		width: 100%;
 		height: 100%;
 	}
-`
+`;

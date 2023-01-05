@@ -55,4 +55,4 @@ export const PROJECTS_DATA = [
 			{ id: 3, label: 'Radix UI, JSON Server' }
 		]
 	},
-]
+];

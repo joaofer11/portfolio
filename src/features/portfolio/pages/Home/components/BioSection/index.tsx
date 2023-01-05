@@ -1,6 +1,6 @@
-import * as S from './styles'
-import { Techs } from './sub-components/Techs'
-import { BaseArticle } from './sub-components/BaseArticle'
+import * as S from './styles';
+import { Techs } from './sub-components/Techs';
+import { BaseArticle } from './sub-components/BaseArticle';
 
 export const BioSection = () => {
 	return (
@@ -15,8 +15,8 @@ export const BioSection = () => {
 				</S.Content>
 				
 				<S.Content>
-					Entre em contato comigo pelo <a href="https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/" target="_blank">Linkedin</a> ou <a id="discord-nick">Discord (joaofer11#2087)</a>, e veja
-					o que ando desenvolvendo no <a href="https://github.com/joaofer11" target="_blank">GitHub</a>.
+					Entre em contato comigo pelo <a href="https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/" target="_blank" rel="noreferrer">Linkedin</a> ou <a id="discord-nick">Discord (joaofer11#2087)</a>, e veja
+					o que ando desenvolvendo no <a href="https://github.com/joaofer11" target="_blank" rel="noreferrer">GitHub</a>.
 				</S.Content>
 			</BaseArticle>
 			
@@ -24,5 +24,5 @@ export const BioSection = () => {
 				<Techs />
 			</BaseArticle>
 		</S.BioSection>
-	)
-}
+	);
+};

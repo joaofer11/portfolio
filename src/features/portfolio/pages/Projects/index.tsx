@@ -1,8 +1,8 @@
-import * as S from './styles'
-import { PROJECTS_DATA } from './data'
-import { ProjectCard } from './components/ProjectCard'
-import { Separator } from '../../../../common/components/Separator'
-import { AppearingAnimation } from '../../../../common/components/AppearingAnimation'
+import * as S from './styles';
+import { PROJECTS_DATA } from './data';
+import { ProjectCard } from './components/ProjectCard';
+import { Separator } from '../../../../common/components/Separator';
+import { AppearingAnimation } from '../../../../common/components/AppearingAnimation';
 
 export const Projects = () => {
 	return (
@@ -22,5 +22,5 @@ export const Projects = () => {
 				))}
 			</ul>
 		</S.Main>
-	)
-}
+	);
+};

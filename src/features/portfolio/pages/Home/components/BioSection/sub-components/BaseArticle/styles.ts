@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const BaseArticle = styled.article`
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-xs);
-`
+`;
 
 export const TitleWrapper = styled.div`
 	display: flex;
@@ -32,4 +32,4 @@ export const TitleWrapper = styled.div`
 		text-transform: uppercase;
 		color: ${({ theme }) => theme['gray-blue-100']};
 	}
-`
+`;

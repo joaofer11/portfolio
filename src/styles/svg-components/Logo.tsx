@@ -24,4 +24,4 @@ export const Logo = () => (
 			</linearGradient>
 		</defs>
 	</svg>
-)
+);

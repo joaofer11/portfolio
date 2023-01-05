@@ -1,7 +1,7 @@
-import * as S from './styles'
-import { PROJECTS_DATA } from '../../data'
-import { useState, useEffect, useRef, useCallback } from 'react'
-import { AppearingAnimation } from '../../../../../../common/components/AppearingAnimation'
+import * as S from './styles';
+import { PROJECTS_DATA } from '../../data';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { AppearingAnimation } from '../../../../../../common/components/AppearingAnimation';
 
 type TProjectData = typeof PROJECTS_DATA[0]
 
@@ -10,38 +10,37 @@ interface IProjectCardProps {
 }
 
 export const ProjectCard = ({ projectData }: IProjectCardProps) => {
-	const [canElAppear, setCanElAppear] = useState(false)
-	const elRef = useRef<HTMLLIElement>(null)
-	const elHasAppearedRef = useRef(false)
+	const [canElAppear, setCanElAppear] = useState(false);
+	const elRef = useRef<HTMLLIElement>(null);
 	
 	const { id, name, linkUrl, features, description, thumbnailPath,
-	} = projectData
-	const isAnOddNumber = id % 2 !== 0
+	} = projectData;
+	const isAnOddNumber = id % 2 !== 0;
 	
 	const checkIfElementCanAppear = () => {
-		const distOfElFromTop = elRef.current!.getBoundingClientRect().y
-		const innerHeight = window.innerHeight
+		const distOfElFromTop = elRef.current!.getBoundingClientRect().y;
+		const innerHeight = window.innerHeight;
 		
-		if (distOfElFromTop - innerHeight <= -25) setCanElAppear(true)
-	}
+		if (distOfElFromTop - innerHeight <= -25) setCanElAppear(true);
+	};
 	
 	const handleScroll = useCallback(() => {
-		checkIfElementCanAppear()
-	}, [])
+		checkIfElementCanAppear();
+	}, []);
 	
 	useEffect(() => {
-		checkIfElementCanAppear()
+		checkIfElementCanAppear();
 		
-		window.addEventListener('scroll', handleScroll)
+		window.addEventListener('scroll', handleScroll);
 		return () => {
-			window.removeEventListener('scroll', handleScroll)
-		}
-	}, [])
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 	
 	useEffect(() => {
-		const elHasAppeared = canElAppear === true
-		if (elHasAppeared) window.removeEventListener('scroll', handleScroll)
-	}, [canElAppear])
+		const elHasAppeared = canElAppear === true;
+		if (elHasAppeared) window.removeEventListener('scroll', handleScroll);
+	}, [canElAppear]);
 	
 	return (
 		<AppearingAnimation
@@ -68,5 +67,5 @@ export const ProjectCard = ({ projectData }: IProjectCardProps) => {
 				</S.RedirectLink>
 			</S.ProjectCard>
 		</AppearingAnimation>
-	)
-}
+	);
+};

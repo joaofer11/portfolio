@@ -1,7 +1,7 @@
-import { BioSection } from './components/BioSection'
-import { IntroSection } from './components/IntroSection'
-import { Separator } from '../../../../common/components/Separator'
-import { AppearingAnimation } from '../../../../common/components/AppearingAnimation'
+import { BioSection } from './components/BioSection';
+import { IntroSection } from './components/IntroSection';
+import { Separator } from '../../../../common/components/Separator';
+import { AppearingAnimation } from '../../../../common/components/AppearingAnimation';
 
 export const Home = () => {
 	return (
@@ -14,5 +14,5 @@ export const Home = () => {
 				<BioSection />
 			</AppearingAnimation>
 		</main>
-	)
-}
+	);
+};

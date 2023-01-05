@@ -8,4 +8,4 @@ export const LOGOS_SVGS = {
 	git: 'devicon-git-plain',
 	github: 'devicon-github-original',
 	figma: 'devicon-figma-plain',
-}
+};

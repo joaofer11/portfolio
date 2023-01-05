@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ProjectCard = styled.li`
 	display: grid;
@@ -30,7 +30,7 @@ export const ProjectCard = styled.li`
 		border-radius: 1px;
 		background-color: ${({ theme }) => theme['gray-blue-500']};
 	}
-`
+`;
 
 export const ProjectImg = styled.img`
 	display: block;
@@ -39,7 +39,7 @@ export const ProjectImg = styled.img`
 	border-radius: 4px;
 	
 	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
-`
+`;
 
 export const ProjectName = styled.h2`
 	margin: var(--spacing-xs) 0 var(--spacing-xxs);
@@ -51,7 +51,7 @@ export const ProjectName = styled.h2`
 	text-transform: uppercase;
 	
 	color: ${({ theme }) => theme['gray-blue-150']};
-`
+`;
 
 export const ProjectDescription = styled.p`
 	font-weight: 400;
@@ -60,7 +60,7 @@ export const ProjectDescription = styled.p`
 	line-height: 1.3;
 	
 	color: ${({ theme }) => theme['gray-blue-500']};
-`
+`;
 
 export const FeaturesList = styled.ul`
 	display: flex;
@@ -84,7 +84,7 @@ export const FeaturesList = styled.ul`
 			color: ${({ theme }) => theme['blue-400']};
 		}
 	}
-`
+`;
 
 export const RedirectLink = styled.a`
 	display: flex;
@@ -110,4 +110,4 @@ export const RedirectLink = styled.a`
 	&:hover {
 		color: ${({ theme }) => theme['gray-blue-200']};
 	}
-`
+`;

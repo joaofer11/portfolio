@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { sizes } from '../../../../../../../../styles/breakpoints'
+import styled from 'styled-components';
+import { sizes } from '../../../../../../../../styles/breakpoints';
 
 export const Techs = styled.div`
 	display: grid;
@@ -15,7 +15,7 @@ export const Techs = styled.div`
 	@media ${sizes.lg} {
 		pointer-events: auto;
 	}
-`
+`;
 
 export const LogoSvgWrapper = styled.div`
 	--opacity;
@@ -101,4 +101,4 @@ export const LogoSvgWrapper = styled.div`
 		-webkit-background-clip: text;
 		color: transparent;
 	}
-`
+`;

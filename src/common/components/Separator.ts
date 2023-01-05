@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 interface IProps {
 	marginTop?: string;
@@ -15,4 +15,4 @@ export const Separator = styled.div<IProps>`
 		margin-bottom: ${marginBottom ?? 'var(--spacing-sm)'};
 		background-color: ${theme['gray-blue-900']};
 	`};
-`
+`;

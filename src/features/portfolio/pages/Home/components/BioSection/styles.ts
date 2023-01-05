@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const BioSection = styled.section`
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-md);
-`
+`;
 
 export const Content = styled.p`
 	max-width: 75ch;
@@ -18,4 +18,4 @@ export const Content = styled.p`
 		font-weight: 500;
 		color: ${({ theme }) => theme['blue-350']};
 	}
-`
+`;
