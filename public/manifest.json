@@ -1,0 +1,8 @@
+{
+	"name": "JF - Portfólio",
+	"description": "Página pessoal com o propósito de servir como blog e portfólio.",
+	"icons": [
+		{ "src": "/images/icon-192.png", "type": "image/png", "sizes": "192x192" },
+		{ "src": "/images/icon-512.png", "type": "image/png", "sizes": "512x512" }
+	]
+}
