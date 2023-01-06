@@ -5,9 +5,10 @@
 </h1>
 
 <p>
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/joaofer11/portfolio?color=5286FF&style=flat">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joaofer11/portfolio?color=5286FF&style=flat">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/joaofer11/portfolio?color=E68320&style=flat">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/joaofer11/portfolio?color=2241DF&labelColor=3D464F&style=flat">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joaofer11/portfolio?color=2241DF&labelColor=3D464F&style=flat">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/joaofer11/portfolio?color=E68320&labelColor=3D464F&style=flat">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/joaofer11/portfolio?color=C73838"
 </p>
 <p>
   <a href="#-sobre">Sobre</a> &nbsp;|&nbsp;
@@ -61,5 +62,5 @@ $ npm run dev
 
 Feito por [João Fernandes](https://github.com/joaofer11)
 
-[![Linkedin Badge](https://img.shields.io/badge/Linkedin-5286FF?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/)](https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/) 
-[![Gmail Badge](https://img.shields.io/badge/Gmail-5286FF?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:joaofergear003@gmail.com)](mailto:joaofergear003@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/Linkedin-04041F?style=flat&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/)](https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/) 
+[![Gmail Badge](https://img.shields.io/badge/Gmail-04041F?style=flat&logo=gmail&logoColor=white&link=mailto:joaofergear003@gmail.com)](mailto:joaofergear003@gmail.com)
