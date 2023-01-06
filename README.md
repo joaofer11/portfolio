@@ -65,7 +65,7 @@ $ npm run dev
 
 ---
 
-Feito por [João Fernandes](https://github.com/joaofer11)
+Feito com 💙 por [João Fernandes](https://github.com/joaofer11)
 
-[![Linkedin Badge](https://img.shields.io/badge/Linkedin-04041F?style=flat&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/)](https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/) 
-[![Gmail Badge](https://img.shields.io/badge/Gmail-04041F?style=flat&logo=gmail&logoColor=white&link=mailto:joaofergear003@gmail.com)](mailto:joaofergear003@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/Linkedin-0E0E0F?style=for-the-badge&logo=linkedin&logoColor=0e76a8&link=https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/)](https://www.linkedin.com/in/jo%C3%A3o-fernandes-569461253/) 
+[![Gmail Badge](https://img.shields.io/badge/Gmail-0E0E0F?style=for-the-badge&logo=gmail&logoColor=D44638&link=mailto:joaofergear003@gmail.com)](mailto:joaofergear003@gmail.com)
